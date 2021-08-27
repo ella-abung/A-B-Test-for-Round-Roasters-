@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>RoundRoastersTransactions.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="StoreID" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Invoice Number" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Invoice Date" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="SKU" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Category" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Product" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="QTY" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Size" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Gross Margin" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Sales" size="254" source="File: C:\Users\Ella Abung\Dropbox\My PC (EllaAbung)\Documents\Udacity NanoDegree\A_B Test (Round Roaster Coffee Project)\p5-project-files\RoundRoastersTransactions.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="198" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Invoice Number" selected="True" type="Int32" size="4" />
+            <SelectField field="Invoice Date" selected="True" type="Date" size="10" />
+            <SelectField field="QTY" selected="True" type="Int32" size="4" />
+            <SelectField field="Gross Margin" selected="True" type="Double" size="8" />
+            <SelectField field="Sales" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="294" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Invoice Date]&gt;='2016-04-29' AND
+[Invoice Date]&lt;='2016-07-21'</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Invoice Date]&gt;='2016-04-29' AND
+[Invoice Date]&lt;='2016-07-21'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="450" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Category" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="354" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Invoice Date]&gt;='2015-04-29' AND
+[Invoice Date]&lt;='2016-04-28'</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Invoice Date]&gt;='2015-04-29' AND
+[Invoice Date]&lt;='2016-04-28'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="498" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Category" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Determining New Products on Menu</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="156d7777-d315-4912-b487-aa0633892d93" />
+      <Telemetry>
+        <PreviousWorkflowId value="adaafe43-959f-4bc8-95b0-13344a874f35" />
+        <OriginWorkflowId value="156d7777-d315-4912-b487-aa0633892d93" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
